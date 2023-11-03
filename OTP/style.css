@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    --destaque: #E4CEC1;
+    --normal: #C4998A;
+    --escalaClara: #EADAD0;
+    --escalaMedia: #31211F;
+    --escalaEscura: #1E0F0E;
+    --verde: #28504E;
+    --media: #C9B896;
+    --verdeClaro: #88B19F;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--verde);
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+
+#view {
+    display: grid;
+    grid-template-areas:
+        "text"
+        "pass";
+    width: 90%;
+    height: 90%;
+    background-color: var(--verde);
+    justify-content: center;
+    padding: 10%;
+    user-select: none;
+}
+
+.resp{
+    position: static;
+    font-size: 32px;
+}
+
+.t1{
+    margin-bottom: 3rem;
+}
+
+.ask{
+    display: flex;
+    height: 35px;
+    flex-direction: column;
+    transform: translateY(-3.5rem);
+}
+
+.ask p{
+    font-size: 27px;
+    color: var(--escalaClara);
+    text-shadow: 1px 1px #030303;
+}
+
+#botao{
+    margin-top: 1.2rem;
+    font-size: 24px;
+    border: 1px ridge var(--escalaClara);
+    border-radius: 4px;
+    color: var(--destaque);
+    background-color: var(--escalaEscura);
+    cursor: pointer;
+    padding: 0.45rem 0.8rem;
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    font-synthesis: weight;
+    transition: 0.4s ease;
+}
+
+#botao:hover{
+    box-shadow: inset 105px 0 #423033;
+}
+
+#botao:active{
+    color: var(--verdeClaro);
+}
+
+.text {
+    grid-area: text;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.text > .title{
+    transform: translateY(-1.8rem);
+}
+
+.title h2 {
+    font-size: 60px;
+    font-weight: bolder;
+    font-style: normal;
+    user-select: none;
+    color: var(--destaque);
+    text-shadow: 3px 3px 5px #030303, 1px 1px #F1F1F1;
+}
+
+.title p {
+    padding: 10px;
+    text-orientation: sideways;
+    width: fit-content;
+    flex-wrap: wrap;
+    flex-flow: column;
+    flex-grow: 1;
+    font-size: 40px;
+    color: var(--escalaClara);
+    text-shadow: 1px 1px 2px #030303;
+    margin-top: 1rem;
+}
+
+.pass {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    min-width: 90%;
+    height: 25%;
+    grid-area: pass;
+}
+
+.number {
+    display: block;
+    text-align: center;
+
+    margin: 15px;
+    padding: 0.15em;
+
+    flex-grow: 1;
+    flex-basis: 20%;
+    flex-shrink: 1;
+    
+    width: 70px;
+    min-height: 115px;
+    max-height: 122px;
+
+    border-radius: 0.1em;
+    background-color: var(--escalaEscura);
+    
+    border-color: #E9E9E9;
+    outline: 0;
+    
+    font-family: "Major Mono Display", monospace;
+    font-size: 80px;
+    color: var(--media);
+    text-shadow: var(--escalaEscura) 1px 1px 7px;
+
+    caret-color: transparent;
+    vertical-align: super;
+
+    box-shadow: 0;
+    transition: box-shadow 0.5s ease;
+}
+
+.number:focus {
+    box-shadow: inset 85px 0 var(--escalaMedia);
+}
+
+.n1 {
+    grid-area: n1;
+}
+
+.n2 {
+    grid-area: n2;
+}
+
+.n3 {
+    grid-area: n3;
+}
+
+.n4 {
+    grid-area: n4;
+}
+
+.n5 {
+    grid-area: n5;
+}
+
+#clear{
+    position: absolute;
+    margin-top: 1.2rem;
+    font-size: 20px;
+    border: 1px ridge var(--escalaClara);
+    border-radius: 4px;
+    color: var(--destaque);
+    background-color: var(--escalaEscura);
+    cursor: pointer;
+    padding: 0.4rem 0.7rem;
+    font-weight: normal;
+    font-stretch: semi-expanded;
+    font-synthesis: weight;
+
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(10.2rem);
+
+    transition: 0.4s ease;
+}
+
+#clear:hover{
+    box-shadow: inset 10em 0 #423033;
+    border: 1px solid var(--escalaClara);
+    text-shadow: 0 0 1px #000;
+}
+
+#clear:active{
+    color: #D1D1D1;
+}
+
+
+#page3 h4{
+
+    text-align: center;
+    text-shadow: 3px 3px 5px #030303, 1px 1px #F1F1F1;
+    color: var(--destaque);
+    font-size: 48px;
+    flex-wrap: wrap;
+}
+
+#page3 p{
+    font-size: 24px;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    color: var(--verdeClaro);
+    text-shadow: 0 0 6px #000, 0 0 1px var(--escalaEscura);
+    flex-wrap: wrap;
+}
+
+#page3 button{
+    margin-top: 1.2rem;
+    font-size: 24px;
+    border: 1px ridge var(--escalaClara);
+    border-radius: 4px;
+    color: var(--destaque);
+    background-color: var(--escalaEscura);
+    cursor: pointer;
+    padding: 0.45rem 0.8rem;
+    font-weight: bold;
+    font-stretch: semi-expanded;
+    font-synthesis: weight;
+    transition: 0.4s ease;
+    flex-wrap: wrap;
+}
+
+#page3 button:hover{
+    box-shadow: inset 10em 0 #423033;
+    border: 1px solid var(--escalaClara);
+}
+
+#page3 button:active{
+    color: var(--verdeClaro);
+}
+
+
+#links{
+    display: grid;
+    grid-template-areas: "github tx vercel";
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-height: 0.9rem;
+    min-height: 0.9rem;
+    position: absolute;
+    width: 800px;
+    transform: translateY(38vh);
+}
+
+#links > a{
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border: 1px solid #FFF;
+    background-color: var(--escalaMedia);
+    text-decoration: none;
+    padding: 7px 8px 5px 6px;
+    align-items: center;
+    border-radius: 3px;
+    transition: 0.35s;
+}
+
+#links > a:hover{
+    box-shadow: inset 22em 0 #423033;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#links > a > .github, #links > a > .vercel{
+    width: fit-content;
+    height: 1.4em;
+}
+
+#links > a > .texts{
+    margin-left: 0.6em;
+    text-justify: none;
+    color: var(--destaque);
+}
+
+#links > span{
+    color: var(--escalaClara);
+    text-decoration: none;
+}
+
+#links > span > a{
+    text-decoration: blink;
+    color: #8CF;
+    text-shadow: 0 0 1px #000;
+}
+
+#links > span > a:hover{
+    text-decoration: underline;
+}
+
+.gt{grid-area: github;}
+.sp{grid-area: tx;}
+.vc{grid-area: vercel;}
+
+
+/* Tablets e Dispositivos Médios */
+@media screen and (min-width: 541px) and (max-width: 970px) {
+    #view {
+        width: 93%;
+        height: 92%;
+        padding: 8%;
+    }
+
+    .title h2 {
+        font-size: 40px;
+    }
+
+    .text div p {
+        padding: 8px;
+        font-size: 26px;
+    }
+
+    #botao{
+        font-size: 21px;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .pass {
+        min-width: 92%;
+        height: 26%;
+    }
+
+    .number {
+        margin: 10px;
+        padding: 0.1em;
+        min-width: 65px;
+        min-height: 93px;
+        max-height: 94px;
+        font-size: 65px;
+    }
+
+    .t1{
+        margin-bottom: 0;
+    }
+
+    #clear{
+        font-size: 18px;
+        margin-top: 0.7rem;
+        padding: 0.25rem 0.42rem;
+    }
+
+    .ask p{
+        font-size: 23px;
+    }
+
+    #page3 h4{
+        font-size: 39px;
+    }
+    
+    #page3 p{
+        font-size: 23px;
+    }
+    
+    #page3 button{
+        font-size: 21px;
+        padding: 0.3rem 0.6rem;
+    }
+
+    #links{
+        justify-content: center;
+        grid-template-areas: 
+            "github github vercel vercel"
+            "tx tx tx tx";
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    #links > span{
+        font-size: 13px;
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    #links > a{
+        font-size: 11px;
+        justify-content: center;
+        text-align: center;
+        padding: 6px 8px 4px 5px;
+        border-radius: 3px;
+    }
+
+    #links > a > .github, #links > a > .vercel{
+        height: 1.2em;
+    }
+
+    #links > a > .texts{
+        margin-left: 0.4em;
+    }
+
+    .gt{
+        grid-area: github;
+        margin-right: 9px;
+    }
+    .vc{
+        grid-area: vercel;
+        margin-left: 9px;
+    }
+}
+
+/* Dispositivos móveis genéricos */
+@media screen and (max-width: 540px) {
+    #view {
+        width: 95%;   /* 5% maior */
+        height: 93%;  /* 3% maior */
+        padding: 7%;  /* 3% menor */
+    }
+
+    .title h2 {
+        font-size: 33px;
+    }
+
+    #page11 > .title{
+        padding-bottom: 2.1rem;
+    }
+
+    .text div p {
+        padding: 6px;
+        font-size: 22px;
+    }
+
+    .pass {
+        min-width: 98%;
+        height: 27%;
+    }
+
+    #botao{
+        font-size: 17px;
+        padding: 0.22rem 0.45rem;
+    }
+
+    .number {
+        margin: 2px;
+        padding: 0.04em;
+        min-width: 42px;
+        max-width: 43px;
+        min-height: 53px;
+        max-height: 54px;
+        font-size: 37px;
+    }
+
+    .t1{
+        margin-bottom: 0;
+    }
+
+    #clear{
+        font-size: 15px;
+        margin-top: 0;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .ask p{
+        font-size: 17px;
+    }
+
+    #page3 h4{
+        font-size: 30px;
+    }
+    
+    #page3 p{
+        font-size: 17px;
+    }
+    
+    #page3 button{
+        font-size: 17px;
+        padding: 0.22rem 0.45rem;
+    }
+
+    #links{
+        justify-content: center;
+        grid-template-areas: 
+            "github" 
+            "tx"
+            "vercel";
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    #links > span{
+        font-size: 11px;
+        margin: 6px 0;
+        text-align: center;
+    }
+
+    #links > a{
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+        padding: 5px 7px 3px 4px;
+        border-radius: 2px;
+    }
+
+    #links > a > .github, #links > a > .vercel{
+        height: 1em;
+    }
+
+    #links > a > .texts{
+        margin-left: 0.3em;
+    }
+}
+
+/* Garantindo orderm de exibição */
+#page11, #page12{
+    display: none;
+    transform: translateY(2rem);
+    transition: visibility 0.9s linear, opacity 0.9s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#page21, #page22{
+    display: none;
+    transition: visibility 0.9s linear, opacity 0.9s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#page3{
+    display: none;
+    transition: visibility 0.9s linear, opacity 0.9s linear;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.changeDisplay{
+    display: flex !important;
+    transition: visibility 0.9s linear, opacity 0.9s linear !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
