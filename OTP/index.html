@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-br">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript" defer>
+		document.addEventListener('DOMContentLoaded', function() {
+		    document.getElementById('page11').classList.toggle('changeDisplay');
+		    document.getElementById('page12').classList.toggle('changeDisplay');
+		});
+	</script>
+	<script type="text/javascript" src="script.js" defer></script>
+	
+	<title>Verificação OTP - Envie seu email</title>
+</head>
+<body>
+	<section id="view">
+		
+		<div id="page11" class="text">
+
+			<div class="title t1">
+				<h2>
+					Verificação OTP
+				</h2>
+			</div>
+		
+		</div>
+
+		<div id="page12" class="resp">
+			<div class="ask">
+				<p>Gere uma senha:</p>
+				<button id="botao">Gerar</button>
+			</div>
+		</div>
+	
+		<div id="page21" class="text">
+
+			<div class="title">
+				<h2>
+					Verificação OTP
+				</h2>
+				<p>Digite os valores enviados a você: </p>
+			</div>
+		
+		</div>
+
+		<div id="page22" class="pass">
+			
+			<input type="text" name="number1" class="number n1" maxlength="1" pattern="[0-9]" autosave="off" autocomplete="off" required>
+			<input type="text" name="number2" class="number n2" maxlength="1" pattern="[0-9]" autosave="off" autocomplete="off" required>
+			<input type="text" name="number3" class="number n3" maxlength="1" pattern="[0-9]" autosave="off" autocomplete="off" required>
+			<input type="text" name="number4" class="number n4" maxlength="1" pattern="[0-9]" autosave="off" autocomplete="off" required>
+			<input type="text" name="number5" class="number n5" maxlength="1" pattern="[0-9]" autosave="off" autocomplete="off" required>
+
+			<button id="clear">Limpar tudo</button>
+		</div>
+
+		<div id="page3">
+			<h4>Senha correta!</h4>
+			<p>Obrigado por testar.</p>
+			<button id="reload">Testar novamente</button>
+		</div>
+	
+	</section>
+
+
+</body>
+</html>
